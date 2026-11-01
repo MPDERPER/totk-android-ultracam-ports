@@ -1,0 +1,4 @@
+release-assets/
+release-staging*/
+*.rar
+*.zip

@@ -1,0 +1,36 @@
+name: Bug report
+description: Report an installation, compatibility, graphics, or performance problem
+title: "[Bug]: "
+body:
+  - type: textarea
+    attributes:
+      label: Problem
+      description: Describe what happened and what you expected.
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Device and SoC/GPU
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Eden build and GPU driver
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: TOTK update and UltraCam version
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Enabled mods and reproduction steps
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: Confirmation
+      options:
+        - label: I am not attaching ROMs, updates, firmware, keys, or copyrighted game assets.
+          required: true
