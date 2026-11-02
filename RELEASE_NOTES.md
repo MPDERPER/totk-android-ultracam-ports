@@ -2,6 +2,14 @@
 
 I am publishing my Android packages for MaxLastBreath’s UltraCam 2.7.1 and UltraCam Calamity 3.0.0, together with my tested 720p configuration and optional Eden Nightly per-game preset.
 
+## Installation — read this first
+
+Follow the complete **[Installation Guide — Eden Nightly (Android)](https://github.com/MPDERPER/totk-android-ultracam-ports#installation-guide-eden-nightly-android)** in the main README. It includes direct downloads, separate UltraCam 2.7.1 and 3.0.0 instructions, the Eden preset import, GPU-driver setup, frame-generation values, verification, common mistakes, and troubleshooting.
+
+The UltraCam **ExeFS add-on** is installed through TOTK’s **Add-ons** interface. The separate UltraCam 3.0.0 configuration is extracted into Eden’s virtual **`sdmc`** root so the INI ends at `sdmc/UltraCam/TOTK/Config/maxlastbreath.ini`; it is not installed through Add-ons. Enable only one UltraCam ExeFS version at a time.
+
+**Compatibility warning:** UltraCam 2.7.1 still applied graphics changes on TOTK 1.4.1 and 1.4.2 in my tests, but its FPS unlock did not work and gameplay remained around 30 FPS. I recommend UltraCam 3.0.0 for those updates.
+
 ## Compatibility correction
 
 - **UltraCam 2.7.1:** the 60 FPS unlock worked on the unupdated 1.0.0 base game in my testing. On TOTK 1.4.1 and 1.4.2, the package still loads and applies graphics changes such as render distance and FOV, but the FPS unlock does not work and gameplay remains around 30 FPS.
@@ -10,7 +18,7 @@ I am publishing my Android packages for MaxLastBreath’s UltraCam 2.7.1 and Ult
 
 Historical upstream metadata lists 1.1.0–1.2.1 for 2.7.1 and adds 1.4.0–1.4.2 for 3.0.0. My Android observations are separate from those upstream listings.
 
-Read the [Quick Installation Guide](https://github.com/MPDERPER/totk-android-ultracam-ports#quick-installation-guide), [complete installation guide](https://github.com/MPDERPER/totk-android-ultracam-ports/blob/main/docs/installation.md), and [compatibility table](https://github.com/MPDERPER/totk-android-ultracam-ports/blob/main/docs/compatibility.md).
+Read the [complete installation guide in the README](https://github.com/MPDERPER/totk-android-ultracam-ports#installation-guide-eden-nightly-android) and the [compatibility table](https://github.com/MPDERPER/totk-android-ultracam-ports/blob/main/docs/compatibility.md).
 
 ## Downloads
 
