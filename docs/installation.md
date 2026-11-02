@@ -1,99 +1,127 @@
 # Installation
 
-This guide keeps the ExeFS add-on, UltraCam configuration, and Eden per-game preset separate. Mixing their destinations is the most common installation error.
+This guide keeps four different components separate: the UltraCam ExeFS add-on, the legacy 2.7.1 RomFS customization path, the 3.0.0 virtual-SD configuration, and Eden’s optional per-game preset.
 
-## 1. Requirements
+## Before installing
 
-- A compatible Android device and Eden Nightly.
-- A legally obtained copy of TOTK.
-- One UltraCam ExeFS ZIP from this project's release.
-- The UltraCam 3.0.0 configuration ZIP when using 3.0.0.
-- Optionally, the Eden per-game preset and TurnipZ 0.3.0.
-- A file manager able to work with Eden's selected data directory or virtual SD card.
+1. Back up TOTK’s current per-game settings and existing mods.
+2. Record your game update, Eden Nightly build, device, and working GPU driver.
+3. Disable other UltraCam, Dynamic FPS, FPS, resolution, `main.npdm`, or `subsdk3` modifications.
+4. Download **one** UltraCam ExeFS ZIP. Never enable 2.7.1 and 3.0.0 together.
+5. Prefer UltraCam 3.0.0 for TOTK 1.4.1 or 1.4.2. My 2.7.1 FPS unlock did not work on those updates.
 
-The preset was tested in Eden Nightly. Other emulators may use different paths, controls, and configuration formats.
+## Install UltraCam 2.7.1
 
-## 2. Choose one UltraCam version
-
-Download either `totk-ultracam-2.7.1-eden-720p.zip` or `totk-ultracam-3.0.0-eden-720p.zip`. Never enable both at the same time. Disable other mods that replace `main.npdm`, `subsdk3`, Dynamic FPS, resolution, or UltraCam settings.
-
-## 3. Install the ExeFS add-on
-
-1. Close TOTK.
-2. Open Eden and select or long-press TOTK to open its game properties.
-3. Open **Add-ons**.
-4. Install or select the chosen UltraCam package using the controls available in your Eden Nightly build.
-5. Confirm the installed mod has this effective structure:
+1. Download `totk-ultracam-2.7.1-eden-720p.zip` from the [release](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/tag/v1.0.0-android-ports).
+2. Extract it if your Eden build requires an unpacked add-on directory.
+3. Open Eden Nightly, select TOTK, and open the game’s **Add-ons** section.
+4. Import or select the UltraCam 2.7.1 package and make sure it is enabled.
+5. Confirm the effective structure is:
 
 ```text
-UltraCam version folder/
+UltraCam 2.7.1/
 └── exefs/
     ├── main.npdm
     └── subsdk3
 ```
 
-Selecting a parent directory that contains another mod folder can leave `exefs` one level too deep and prevent Eden from recognizing it.
+6. Disable conflicting mods, fully restart Eden, and launch the game.
 
-## 4. Install the 3.0.0 configuration
-
-This step is for UltraCam 3.0.0. It is not another add-on.
-
-Extract `totk-ultracam-3.0.0-android-config.zip` into Eden's virtual SD-card root. Preserve the archive structure so the final files are:
+The original 2.7.1 customization system expects:
 
 ```text
-sdmc/
-└── UltraCam/
-    └── TOTK/
-        └── Config/
-            ├── maxlastbreath.ini
-            └── PaletteCFG.json
+romfs/UltraCam/maxlastbreath.ini
 ```
 
-The required INI location is `sdmc/UltraCam/TOTK/Config/maxlastbreath.ini`. If your file manager is already showing the virtual `sdmc` root, copy the `UltraCam` folder there. Do not create `sdmc/sdmc/UltraCam/...`.
+This release does not include that legacy INI. It is not mandatory for every executable behavior: I observed the ExeFS-only package running the 1.0.0 base game with the FPS unlock working. The legacy file is the original customization path. Do not assume the 3.0.0 SD-card INI is compatible with 2.7.1, and do not expect a RomFS INI alone to make the old FPS patch work on 1.4.x.
 
-## 5. UltraCam 2.7.1 configuration limitation
+On TOTK 1.4.1 and 1.4.2, my 2.7.1 package still loaded and applied FOV, render-distance, and other graphics changes, but gameplay remained around 30 FPS. Use 3.0.0 when FPS unlocking is required on those updates.
 
-The original 2.7.1 layout reads a legacy configuration from `romfs/UltraCam/maxlastbreath.ini`. The supplied 2.7.1 package contains only ExeFS files, and no compatible 2.7.1 RomFS configuration was provided for this release. The 3.0.0 SD-card configuration is not advertised as interchangeable. Users who need custom 2.7.1 values must obtain or create a compatible legacy RomFS configuration through the upstream workflow.
+## Install UltraCam 3.0.0
 
-## 6. Install TurnipZ 0.3.0 (optional)
+### Part 1 — ExeFS add-on
 
-TurnipZ 0.3.0 was used in my test setup but is not a universal requirement and is not bundled here.
-
-1. Download it from the developer's [v0.3.0 release](https://github.com/AlexSanz0902/turnip-sd865-z/releases/tag/v0.3.0).
-2. Open Eden's **GPU Driver Manager**.
-3. Install the driver ZIP and select it for TOTK as appropriate.
-4. If it causes crashes or graphical corruption, restore Eden's system/default driver or another driver known to work on your Adreno generation.
-
-Different Adreno generations can respond differently to custom drivers.
-
-## 7. Import the Eden per-game preset (optional)
-
-The preset can overwrite existing TOTK preferences. Export or back up your current per-game configuration first.
-
-1. Download `0100F2C0115B6000.ini`.
-2. In Eden, open TOTK's game properties.
-3. Locate the **Settings** row. Eden's current Android game-properties screen exposes **Import Config** as a secondary action once a per-game configuration exists. If needed, first open Settings and change one game-specific option so Eden creates the file.
-4. Choose **Import Config** and select the downloaded INI.
-5. Reopen the game's settings and verify CPU, graphics, handheld mode, and frame-generation values.
-6. Open the GPU Driver Manager and confirm TurnipZ 0.3.0 is installed and selected. The preset contains my device-specific path and cannot install the driver itself.
-7. Fully restart Eden.
-
-Eden copies the selected file to its internal user directory as `config/custom/0100F2C0115B6000.ini`. Direct Android file access is unnecessary when the import action is present. If your build does not expose **Import Config**, update to a build that supports it or use Eden's own user-data access/export facilities; do not guess an inaccessible Android app-data path.
-
-To revert, restore your exported configuration, reset TOTK's per-game settings through Eden, or remove the custom settings and return individual options to global/default values.
-
-## 8. Verify frame generation
-
-After import, confirm:
+1. Download `totk-ultracam-3.0.0-eden-720p.zip`.
+2. Open TOTK’s **Add-ons** section in Eden Nightly.
+3. Import or select the package and make sure it is enabled.
+4. Confirm the structure is:
 
 ```text
-Frame Generation: On
-Target frame rate: Use a fixed multiplier
-Frame multiplier: 2×
-Frame queue target: Balanced (1 frame)
-Motion estimation resolution: 50%
+UltraCam 3.0.0/
+└── exefs/
+    ├── main.npdm
+    └── subsdk3
 ```
 
-## 9. Launch and test
+### Part 2 — virtual-SD configuration
 
-Restart Eden and launch TOTK. With UltraCam 3.0.0, hold **ZL + ZR** and press **L3** to open the controller-accessible menu. Upstream also documents F12 with a keyboard. Check that the configuration loads, game speed remains normal, graphics are correct, and frame pacing is acceptable. If the INI is ignored, recheck the exact SD-card path and folder nesting.
+1. Download `totk-ultracam-3.0.0-android-config.zip`.
+2. Locate Eden Nightly’s virtual SD-card root.
+3. Extract the ZIP into that root while preserving the archive’s folders.
+4. Confirm the final layout is:
+
+```text
+Eden Nightly/
+└── sdmc/
+    └── UltraCam/
+        └── TOTK/
+            └── Config/
+                ├── maxlastbreath.ini
+                └── PaletteCFG.json
+```
+
+The required INI path is `sdmc/UltraCam/TOTK/Config/maxlastbreath.ini`. This configuration ZIP does **not** belong in the Add-ons manager.
+
+### Common mistakes
+
+- Installing the configuration INI through Add-ons.
+- Leaving the ZIP in the destination instead of extracting it.
+- Creating `sdmc/sdmc/UltraCam`.
+- Creating `UltraCam/UltraCam/TOTK`.
+- Running 2.7.1 and 3.0.0 together.
+- Leaving another FPS or `subsdk3` mod enabled.
+- Editing a duplicate INI that UltraCam is not reading.
+
+### Verify UltraCam 3.0.0
+
+1. Fully restart Eden Nightly.
+2. Launch TOTK and confirm normal game speed, graphics, resolution, and frame pacing.
+3. Hold **ZL + ZR** and click the left stick (**L3**) to open the menu in my tested controller configuration.
+4. Verify the FPS and resolution values.
+5. If nothing changes, recheck the exact virtual-SD path and disable conflicts.
+
+## Import the Eden Nightly per-game preset
+
+`0100F2C0115B6000.ini` is an emulator preset, not UltraCam’s `maxlastbreath.ini`.
+
+1. Back up your current TOTK per-game settings.
+2. Download `0100F2C0115B6000.ini`.
+3. Open TOTK’s properties in Eden and use **Import Config**.
+4. Import the file and review the resulting CPU, graphics, and frame-generation settings.
+5. Open the GPU Driver Manager and manually select a driver appropriate for your GPU.
+6. Fully restart Eden.
+
+The preset was exported with TurnipZ 0.3.0 and contains an Android-specific driver path. Importing it does not install that driver, and the path may not exist elsewhere. Do not replace it with a guessed Turnip v27.0.0-R1 path. Select the desired installed driver through Eden after importing.
+
+## Install a custom GPU driver — Adreno 740
+
+1. Open StevenMXZ’s official [Turnip v27.0.0-R1 release](https://github.com/StevenMXZ/Adreno-Tools-Drivers/releases/tag/v27.0.0-R1).
+2. Confirm the package matches your GPU. For Adreno 740, the regular `Turnip_v27.0.0-R1.zip` is the expected 6xx/7xx starting point. The Gen8 V38 archives are A8xx builds; the OneUI archive is specialized for relevant Samsung environments.
+3. Download the AdrenoTools-compatible ZIP without extracting or installing system components unless the developer instructs you to.
+4. Open Eden’s **GPU Driver Manager**, import/install the ZIP, and select it for TOTK.
+5. Restart Eden if required, then test stability, rendering, FPS, and frame pacing.
+6. If behavior worsens, reselect the previous working driver or system/default driver and restart.
+
+I later experienced smoother gameplay with a driver from that release, but did not preserve the exact selected ZIP or collect new controlled measurements. TurnipZ 0.3.0 remains the driver associated with the published benchmark table and original preset. See [GPU drivers](gpu-drivers.md).
+
+## Final verification checklist
+
+- Exactly one UltraCam ExeFS package is enabled.
+- `exefs` is directly under the selected add-on folder.
+- The 3.0.0 INI is at `sdmc/UltraCam/TOTK/Config/maxlastbreath.ini`.
+- The Eden preset was imported through Eden and is not treated as an UltraCam INI.
+- The selected GPU driver is installed and appropriate for the device.
+- TOTK runs at normal speed and expected graphics settings.
+- On 1.4.1/1.4.2, UltraCam 3.0.0 is selected if FPS unlocking is required.
+
+If verification fails, use [Troubleshooting](troubleshooting.md).

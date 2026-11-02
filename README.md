@@ -1,109 +1,139 @@
 # TOTK Android UltraCam Ports
 
-Community-maintained Android packages for **MaxLastBreath's UltraCam 2.7.1 and UltraCam Calamity 3.0.0**, prepared for *The Legend of Zelda: Tears of the Kingdom* in Eden Nightly.
+Community-maintained Android packages for **MaxLastBreath's UltraCam 2.7.1 and UltraCam Calamity 3.0.0**, prepared for *The Legend of Zelda: Tears of the Kingdom* in Eden Nightly with a 1280 × 720 target.
 
-[Download the latest release](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/latest) · [Installation guide](docs/installation.md) · [Troubleshooting](docs/troubleshooting.md)
+**[Download v1.0.0](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/tag/v1.0.0-android-ports)** · **[Complete installation guide](docs/installation.md)** · [Compatibility](docs/compatibility.md) · [GPU drivers](docs/gpu-drivers.md) · [Troubleshooting](docs/troubleshooting.md)
 
 I manually adapted, configured, packaged, and tested these Android setups. **I did not create UltraCam.** The original UltraCam and NX Optimizer software was developed by [MaxLastBreath](https://github.com/MaxLastBreath/nx-optimizer). This is an unofficial community project.
 
-## What is included
-
-The release contains four separate downloads:
+## Downloads
 
 | Asset | Purpose |
 | --- | --- |
-| `totk-ultracam-2.7.1-eden-720p.zip` | UltraCam 2.7.1 ExeFS add-on. |
-| `totk-ultracam-3.0.0-eden-720p.zip` | UltraCam 3.0.0 ExeFS add-on. |
-| `totk-ultracam-3.0.0-android-config.zip` | UltraCam 3.0.0 SD-card configuration, including `maxlastbreath.ini` and `PaletteCFG.json`. |
-| `0100F2C0115B6000.ini` | Optional Eden Nightly per-game preset for TOTK. |
+| [`totk-ultracam-2.7.1-eden-720p.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.0.0-android-ports/totk-ultracam-2.7.1-eden-720p.zip) | UltraCam 2.7.1 ExeFS add-on. |
+| [`totk-ultracam-3.0.0-eden-720p.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.0.0-android-ports/totk-ultracam-3.0.0-eden-720p.zip) | UltraCam 3.0.0 ExeFS add-on. |
+| [`totk-ultracam-3.0.0-android-config.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.0.0-android-ports/totk-ultracam-3.0.0-android-config.zip) | UltraCam 3.0.0 virtual-SD configuration. |
+| [`0100F2C0115B6000.ini`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.0.0-android-ports/0100F2C0115B6000.ini) | Optional Eden Nightly per-game preset. |
 
-Install **only one** UltraCam ExeFS version at a time. The executable add-on, UltraCam configuration, and Eden per-game preset use three different installation procedures.
+Install **only one** UltraCam ExeFS version at a time. The ExeFS add-on, UltraCam configuration, and Eden per-game preset have different destinations.
 
-## Version comparison
+## Important compatibility warning
+
+**Use UltraCam 3.0.0 for TOTK 1.4.1 or 1.4.2.** In my Android testing, UltraCam 2.7.1 still loaded and applied graphics changes on those updates, including reduced render distance and modified FOV, but its FPS unlock did not work and gameplay remained around 30 FPS. On the unupdated 1.0.0 base game, I observed the 2.7.1 package running with its 60 FPS unlock working.
+
+| TOTK version | UltraCam 2.7.1 | UltraCam 3.0.0 |
+| --- | --- | --- |
+| 1.0.0 — base game | 60 FPS unlock worked in my testing; not upstream-listed | Reported working in my testing; not upstream-listed |
+| 1.1.0–1.2.1 | Officially listed upstream | Officially listed upstream |
+| 1.4.0 | Outside official 2.7.1 support; not separately tested here | Officially listed upstream |
+| 1.4.1 | **Partial:** graphics work, FPS remains around 30 | **Recommended:** FPS unlock works in my testing |
+| 1.4.2 | **Partial:** graphics work, FPS remains around 30 | **Recommended:** FPS unlock works in my testing |
+| 1.4.3 | Repeated crashes in my Android setup | Repeated crashes in my Android setup |
+
+The 1.4.3 result is device-specific, not a universal incompatibility claim. Historical upstream support and my Android tests are separated in [Compatibility](docs/compatibility.md).
+
+## UltraCam 2.7.1 versus 3.0.0
 
 | | UltraCam 2.7.1 | UltraCam 3.0.0 |
 | --- | --- | --- |
-| ExeFS installation | Eden game add-ons | Eden game add-ons |
-| Configuration location | Legacy `romfs/UltraCam/maxlastbreath.ini` | Virtual SD card: `sdmc/UltraCam/TOTK/Config/maxlastbreath.ini` |
-| Configuration in this release | **Not included**; no compatible 2.7.1 RomFS configuration was supplied | Included as a separate ZIP |
-| In-game menu shortcut | Build-specific; not verified for this package | Hold **ZL + ZR**, then press **L3**; also documented upstream as F12 with a keyboard |
-| Reported overworld result | 35 FPS | 40 FPS |
-| Reported shrine result | 45 FPS | 55 FPS |
+| Recommended use | Primarily older TOTK versions | Newer tested updates, especially 1.4.1 and 1.4.2 |
+| ExeFS installation | Eden **Add-ons** | Eden **Add-ons** |
+| Configuration system | Legacy `romfs/UltraCam/maxlastbreath.ini` | `sdmc/UltraCam/TOTK/Config/maxlastbreath.ini` |
+| Configuration supplied here | ExeFS only; legacy INI not included | Separate configuration ZIP included |
+| 1.4.1/1.4.2 FPS unlock | Did not work in my tests | Worked in my tests |
+| Verified menu shortcut | Not verified for this build | Hold **ZL + ZR**, then press **L3** |
 
-The 2.7.1 download is therefore an executable-only port. Do not assume the 3.0.0 SD-card configuration is compatible with 2.7.1.
+The 2.7.1 ExeFS-only package can function without a separately supplied legacy INI; I observed its FPS unlock on the base game. The legacy RomFS file is the original customization path, not a guarantee that the old FPS patch works on 1.4.x. Do not give 2.7.1 the 3.0.0 SD-card INI.
 
-## My reported performance
+## Quick Installation Guide
 
-| Test location | UltraCam 2.7.1 | UltraCam 3.0.0 | Relative difference |
+### UltraCam 2.7.1
+
+1. Download `totk-ultracam-2.7.1-eden-720p.zip`.
+2. In Eden Nightly, open TOTK’s properties and select **Add-ons**.
+3. Import the package, enable it, and disable conflicting UltraCam, FPS, Dynamic FPS, `main.npdm`, or `subsdk3` mods.
+4. Confirm the installed folder contains `exefs/main.npdm` and `exefs/subsdk3`, then fully restart Eden.
+5. Prefer an older game version. On 1.4.1 and 1.4.2, expect graphics tweaks to load while the game remains around 30 FPS in my tested setup.
+
+```text
+UltraCam 2.7.1/
+└── exefs/
+    ├── main.npdm
+    └── subsdk3
+```
+
+### UltraCam 3.0.0
+
+1. Download `totk-ultracam-3.0.0-eden-720p.zip` and install it from TOTK’s **Add-ons** screen.
+2. Download `totk-ultracam-3.0.0-android-config.zip` separately.
+3. Extract the configuration ZIP into Eden Nightly’s **virtual SD-card root**. Do not install it through Add-ons.
+4. Verify the final files are:
+
+```text
+sdmc/UltraCam/TOTK/Config/maxlastbreath.ini
+sdmc/UltraCam/TOTK/Config/PaletteCFG.json
+```
+
+5. Fully restart Eden, launch TOTK, then hold **ZL + ZR** and click **L3** to open the tested controller menu.
+
+Avoid `sdmc/sdmc/UltraCam`, `UltraCam/UltraCam/TOTK`, and leaving the configuration ZIP unextracted. Read the [complete installation guide](docs/installation.md) for precise layouts and verification steps.
+
+## Importing the Eden Nightly preset
+
+`0100F2C0115B6000.ini` is an optional **emulator per-game preset**, not UltraCam’s `maxlastbreath.ini`.
+
+1. Back up your current TOTK per-game settings.
+2. Open TOTK’s properties and use Eden’s supported **Import Config** action.
+3. Import the file, review CPU and graphics settings, and reselect your GPU driver.
+4. Restart Eden.
+
+The preset preserves the original TurnipZ 0.3.0 path used for the earlier benchmark setup. Importing it does not install a driver, and its Android path may not exist elsewhere. It keeps 21,000 custom CPU ticks, fixed 2× frame generation, Balanced (1 frame), and 50% motion-estimation resolution. See [Eden preset](docs/eden-preset.md).
+
+## Recommended GPU Drivers — Adreno 740
+
+| Driver | Status |
+| --- | --- |
+| [TurnipZ 0.3.0](https://github.com/AlexSanz0902/turnip-sd865-z/releases/tag/v0.3.0) | Previous tested configuration; used for the published benchmark readings and saved preset path. |
+| [Turnip v27.0.0-R1](https://github.com/StevenMXZ/Adreno-Tools-Drivers/releases/tag/v27.0.0-R1) by StevenMXZ | Newly tested; I experienced smoother gameplay, but did not record a new controlled benchmark or the exact ZIP selected. |
+| Other drivers | Performance and compatibility are not established by this project. |
+
+The AYN Thor Max uses Snapdragon 8 Gen 2 with Adreno 740. StevenMXZ’s release identifies the `Turnip_Gen8_V38` packages as A8xx builds, so they are not the default for Adreno 740. The regular `Turnip_v27.0.0-R1.zip` is the expected 6xx/7xx starting point; the OneUI archive is specialized for relevant Samsung environments. Because my exact ZIP was not recorded, this is compatibility guidance rather than a claim about the precise tested file.
+
+Install a compatible ZIP through Eden’s **GPU Driver Manager**, select it for TOTK, restart Eden, and check stability, rendering, FPS, and frame pacing. Keep the previous driver available so you can switch back. Do not install systemwide components unless the developer explicitly instructs you to. Read [GPU drivers](docs/gpu-drivers.md).
+
+## Performance benchmarks
+
+These readings belong to the **earlier TurnipZ 0.3.0 configuration**, not Turnip v27.0.0-R1:
+
+| Location | UltraCam 2.7.1 | UltraCam 3.0.0 | Relative difference |
 | --- | ---: | ---: | ---: |
 | Overworld | 35 FPS | 40 FPS | +14.29% |
 | Shrines | 45 FPS | 55 FPS | +22.22% |
 
-These are observed readings from my testing. They are not guaranteed minimums or independently reproduced benchmarks. My Eden preset enables **fixed 2× frame generation**, and the supplied material does not establish whether the displayed readings include generated frames. Do not interpret them as confirmed native, game-rendered FPS. Other configuration differences may also contribute to the observed gap.
-
-### Tested setup — AYN Thor Max / Eden Nightly
-
-| Component | Tested configuration |
-| --- | --- |
-| Device | AYN Thor Max |
-| SoC / GPU | Snapdragon 8 Gen 2 / Adreno 740 |
-| Emulator | Eden Nightly |
-| GPU driver | [TurnipZ 0.3.0](https://github.com/AlexSanz0902/turnip-sd865-z/releases/tag/v0.3.0) |
-| Game rendering target | 1280 × 720, handheld mode |
-| Frame generation | Enabled; fixed multiplier; 2× |
-| Frame queue target | Balanced (1 frame) |
-| Motion-estimation resolution | 50% |
-| Custom CPU ticks | Enabled; 21000 |
-
-I referred to part of my setup as “CPU Debug in FreeDeno settings.” Eden exposes separate **Custom CPU Ticks** and **Freedreno Settings** controls. The exported preset proves the custom tick values above, but it does not contain a key literally named `cpu_debug`; I therefore keep that phrase as a user-reported description rather than equating the two features.
+They are my observed readings, not independently reproduced benchmarks or guaranteed sustained rates. Fixed 2× frame generation was enabled, and the supplied material does not establish whether the counter includes generated frames. My later “smoother” Turnip v27.0.0-R1 report is qualitative and does not prove higher average FPS, 1% lows, or a specific mechanism. See [Benchmarks](docs/benchmarks.md).
 
 ## Frame generation
 
-The preset contains:
+The preset enables fixed 2× frame generation, a Balanced one-frame queue, and 50% motion-estimation resolution. Interpolated output frames are separate from native game-rendered FPS and can affect latency, visual quality, and displayed counter behavior. Read [Frame generation](docs/frame-generation.md).
 
-```ini
-frame_gen=true
-frame_gen_multiplier=2
-frame_gen_target_rate=0
-frame_gen_flow_scale_auto=false
-frame_gen_flow_scale=50
-frame_gen_queue_target=1
-```
+## Troubleshooting
 
-Eden's current Android interface maps these values to **On**, **2×**, **Use a fixed multiplier**, **50% motion estimation**, and **Balanced (1 frame)**. Frame generation inserts interpolated output frames between rendered frames. It may improve perceived smoothness, but it does not increase the game's simulation rate and can add latency or visual artifacts. See [Frame generation](docs/frame-generation.md).
+- **2.7.1 remains near 30 FPS on 1.4.1/1.4.2:** this matches my tests even when FOV and render-distance changes work. Use 3.0.0 for these updates.
+- **3.0.0 ignores the INI:** verify `sdmc/UltraCam/TOTK/Config/maxlastbreath.ini` and remove duplicate `sdmc` or `UltraCam` folders.
+- **Preset selects the wrong driver:** select the installed driver manually after import; do not guess an Android path.
+- **Crashes or artifacts:** disable conflicts, restore the previous driver, and test conservative settings.
 
-## Community-tested game versions
+See [Troubleshooting](docs/troubleshooting.md).
 
-I report that both packages worked in my Android setup through **TOTK 1.4.2**. I repeatedly encountered crashes on **1.4.3**. MaxLastBreath's current upstream documentation lists 1.4.0 and 1.4.1 as partial and lists 1.4.2 as supported for the current release; the older 2.7.1 build has a narrower historical support context. My Android results are not official upstream support or a universal compatibility guarantee. See [Compatibility](docs/compatibility.md).
-
-## Quick installation
-
-1. Back up your Eden per-game settings and existing mods.
-2. Download **one** ExeFS ZIP from the release.
-3. In Eden, open TOTK's game properties and install or select that package under **Add-ons**. The selected mod folder must contain `exefs/main.npdm` and `exefs/subsdk3` directly below it.
-4. For UltraCam 3.0.0, separately extract the configuration ZIP into Eden's virtual SD card so the final file is `sdmc/UltraCam/TOTK/Config/maxlastbreath.ini`.
-5. Optionally install TurnipZ 0.3.0 through Eden's GPU Driver Manager, then import `0100F2C0115B6000.ini` from the TOTK game-properties screen. Recheck the active driver after import because the preset contains my device-specific Android path.
-6. Fully restart Eden, launch the game, and verify game speed, graphics, frame pacing, and temperatures.
-
-Read the [complete installation guide](docs/installation.md) before installing. The imported preset can replace your existing per-game preferences.
-
-## Configuration highlights
-
-The supplied UltraCam 3.0.0 configuration targets 1280 × 720 and enables Dynamic FPS. It uses 60 FPS gameplay/menu limits, a 30 FPS movie limit, shadow resolution 206, render distance 5000, FOV 45, FSR on, FXAA off, and disables ambient occlusion, bloom, screen-space reflections, and volumetric fog. `IsTimeSlower=False` and `TimeSpeed=1.00` preserve normal time speed. See [Configuration reference](docs/configuration.md).
-
-## Gameplay recordings & performance showcase
-
-No recordings or screenshots were supplied with this release. The performance table records my reported observations only; it is not backed by uploaded footage or independent capture data.
-
-## Credits and license
+## Credits and licensing
 
 - **MaxLastBreath:** original NX Optimizer and UltraCam development.
-- **MPDERPER:** manual Android adaptation, configuration, optimization, troubleshooting, testing, and packaging.
+- **MPDERPER:** Android adaptation, configuration, troubleshooting, testing, and packaging.
+- **StevenMXZ:** Adreno-Tools-Drivers and the linked Turnip v27.0.0-R1 release.
 - **ChatGPT:** technical assistance with validation and documentation.
 
-The unchanged upstream binaries are redistributed under MaxLastBreath's published **CC BY-NC 2.0** notice. This means attribution and noncommercial terms apply. No ROM, game update, firmware, cryptographic keys, emulator binary, GPU-driver binary, or Nintendo game assets are included. See [LICENSING.md](LICENSING.md) and [PROVENANCE.md](PROVENANCE.md).
+The unchanged UltraCam binaries are redistributed under MaxLastBreath’s published **CC BY-NC 2.0** notice. No ROM, update, firmware, keys, emulator binary, or GPU-driver binary is included. See [LICENSING.md](LICENSING.md), [CREDITS.md](CREDITS.md), and [PROVENANCE.md](PROVENANCE.md).
 
 ## Disclaimer
 
-This project is not affiliated with or endorsed by MaxLastBreath, Nintendo, Eden, or the TurnipZ developers. Use legally obtained game content. Back up your data. Results vary by hardware, driver, emulator build, game update, scene, other mods, and thermal conditions.
-
+This project is not affiliated with or endorsed by MaxLastBreath, Nintendo, Eden, StevenMXZ, or the TurnipZ developers. Use legally obtained game content. Back up your data. Results vary by hardware, driver, emulator build, game update, scene, mods, and thermal conditions.
