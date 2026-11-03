@@ -262,16 +262,33 @@ For additional reference, see the separate [installation notes](docs/installatio
 
 The 2.7.1 ExeFS-only package can function without a separately supplied legacy INI; I observed its FPS unlock on the base game. The legacy RomFS file is the original customization path, not a guarantee that the old FPS patch works on 1.4.x. Do not give 2.7.1 the 3.0.0 SD-card INI.
 
-## Performance benchmarks
+## New Performance Findings — Standard Eden vs Eden Nightly
 
-These readings belong to the **earlier TurnipZ 0.3.0 configuration**, not Turnip v27.0.0-R1:
+In my latest real-world test, **UltraCam 3.0.0 reached approximately 50 FPS in the overworld and 60 FPS in shrines at 1280 × 720** on an AYN Thor Max with Snapdragon 8 Gen 2 and Adreno 740. This test used **Standard Eden**, meaning the stable/main release rather than Eden Nightly. Frame generation was unavailable and not active in this Eden build, so the new readings are observed gameplay FPS without generated output frames.
+
+| Emulator build | UltraCam | Resolution | Frame generation | Overworld | Shrines |
+| --- | --- | --- | --- | ---: | ---: |
+| **Standard Eden (stable/main)** | 3.0.0 | 1280 × 720 | **Disabled / unavailable** | **~50 FPS** | **~60 FPS** |
+| Eden Nightly — previous observation | 3.0.0 | 1280 × 720 | Fixed 2× configured | ~40 FPS | ~55 FPS |
+
+The reported-reading differences are approximately **+25% in the overworld** and **+9.1% in shrines** for Standard Eden. These percentages compare the displayed observations only. They do **not** prove native-FPS improvements of 25% or 9.1%, because this was not a controlled benchmark and the previous Nightly counter’s treatment of generated frames was never conclusively established.
+
+Other settings were kept consistent with my previous configuration, including the FreeDeno settings, CPU configuration, UltraCam INI, and GPU-driver choice. The supplied Standard Eden INI still contains inherited frame-generation fields, but the feature was not available or active in the tested build; retained configuration keys are not evidence that generated frames were used.
+
+Standard Eden delivered higher observed FPS in this test despite being updated less frequently than Nightly. This makes Standard Eden a **potentially preferable option for UltraCam 3.0.0 users on similar hardware**, but further testing is necessary. The result does not establish a Nightly performance regression or attribute the difference exclusively to UltraCam. Emulator implementation differences, CPU/GPU scheduling, Vulkan behavior, frame pacing, thermal state, caches, scene selection, and measurement methodology are possible explanations, not confirmed causes.
+
+A future controlled comparison should use the same location, save file, GPU driver, 1280 × 720 resolution, FPS counter, device temperature conditions, and frame-generation state. No exact Standard Eden build number, test duration, 1% low, or frame-time capture was recorded for this observation. See [Reported performance](docs/benchmarks.md) for the complete context.
+
+## Historical performance observations — Eden Nightly
+
+The earlier readings below remain preserved as historical observations from the **TurnipZ 0.3.0 configuration on Eden Nightly**, not Turnip v27.0.0-R1:
 
 | Location | UltraCam 2.7.1 | UltraCam 3.0.0 | Relative difference |
 | --- | ---: | ---: | ---: |
 | Overworld | 35 FPS | 40 FPS | +14.29% |
 | Shrines | 45 FPS | 55 FPS | +22.22% |
 
-They are my observed readings, not independently reproduced benchmarks or guaranteed sustained rates. Fixed 2× frame generation was enabled, and the supplied material does not establish whether the counter includes generated frames. My later “smoother” Turnip v27.0.0-R1 report is qualitative and does not prove higher average FPS, 1% lows, or a specific mechanism. See [Benchmarks](docs/benchmarks.md).
+They are my observed readings, not independently reproduced benchmarks or guaranteed sustained rates. Fixed 2× frame generation was configured, and the supplied material does not establish whether the counter included generated frames. My later “smoother” Turnip v27.0.0-R1 report is qualitative and does not prove higher average FPS, 1% lows, or a specific mechanism. See [Reported performance](docs/benchmarks.md).
 
 ## Credits and licensing
 

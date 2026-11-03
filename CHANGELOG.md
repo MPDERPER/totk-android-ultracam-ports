@@ -1,5 +1,13 @@
 # Changelog
 
+## Standard Eden performance findings — 2026-11-03
+
+- Documented my latest UltraCam 3.0.0 results on Standard Eden at 1280 × 720 on an AYN Thor Max: approximately 50 FPS in the overworld and 60 FPS in shrines without frame generation.
+- Compared those readings with the previous Eden Nightly observations of approximately 40 FPS in the overworld and 55 FPS in shrines.
+- Recorded the arithmetic differences as +25% and approximately +9.1% comparisons of reported readings only, not proven native-FPS improvements or evidence of a confirmed Nightly regression.
+- Preserved the earlier Nightly and UltraCam 2.7.1 results as historical observations and added requirements for a future controlled comparison.
+- Changed documentation only. No UltraCam binary, ZIP package, INI configuration, GPU setting, benchmark preset, or release asset was modified.
+
 ## Documentation correction — 2026-11-02
 
 - Corrected UltraCam 2.7.1 compatibility: its graphics modifications remain partially functional on TOTK 1.4.1 and 1.4.2, but its FPS unlock did not work in my tests and gameplay stayed around 30 FPS.
