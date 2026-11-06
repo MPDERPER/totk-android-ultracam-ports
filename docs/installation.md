@@ -6,9 +6,9 @@ This guide keeps four different components separate: the UltraCam ExeFS add-on, 
 
 The [v1.1.0 900p Docked release](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/tag/v1.1.0-900p-docked) uses three separate downloads:
 
-1. Install [`totk-ultracam-3.0.0-900p-docked-exefs-v1.1.0.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/totk-ultracam-3.0.0-900p-docked-exefs-v1.1.0.zip) through TOTK's **Add-ons** manager.
-2. Extract the `UltraCam` folder from [`totk-ultracam-3.0.0-900p-docked-config-v1.1.0.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/totk-ultracam-3.0.0-900p-docked-config-v1.1.0.zip) directly into Eden Stable's existing virtual `sdmc` root.
-3. Import [`totk-eden-stable-900p-docked-v1.1.0.ini`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/totk-eden-stable-900p-docked-v1.1.0.ini) through Eden Stable's per-game **Import Config** action.
+1. Install [`UltraCam 3.0.0.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/UltraCam%203.0.0.zip) through TOTK's **Add-ons** manager. [`UltraCam 2.7.1.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/UltraCam%202.7.1.zip) is also available for legacy use, but only one executable version may be enabled.
+2. Extract the `UltraCam` folder from [`UltraCam 900p.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/UltraCam%20900p.zip) directly into Eden Stable's existing virtual `sdmc` root.
+3. Import [`EDEN STABLE SETTINGS.ini`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/EDEN%20STABLE%20SETTINGS.ini) through Eden Stable's per-game **Import Config** action.
 4. Enable **Docked Mode**, restart Eden, and verify 1600 × 900 with `ShadowResolution = 512`.
 
 > **IMPORTANT: THIS IS THE 900P DOCKED PRESET. ENABLE DOCKED MODE IN EDEN BEFORE PLAYING.**
@@ -105,7 +105,7 @@ The required INI path is `sdmc/UltraCam/TOTK/Config/maxlastbreath.ini`. This con
 
 ## Import an Eden per-game preset
 
-The emulator preset is not UltraCam’s `maxlastbreath.ini`. Use `totk-eden-stable-900p-docked-v1.1.0.ini` for the new 900p Stable workflow, [`regular.Eden.totk.ini`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.0.0-android-ports/regular.Eden.totk.ini) for the previous Standard Eden export, or [`Nightly.Eden.Totk.ini`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.0.0-android-ports/Nightly.Eden.Totk.ini) for the previous Nightly export.
+The emulator preset is not UltraCam’s `maxlastbreath.ini`. Use `EDEN STABLE SETTINGS.ini` for the new 900p Stable workflow, [`regular.Eden.totk.ini`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.0.0-android-ports/regular.Eden.totk.ini) for the previous Standard Eden export, or [`Nightly.Eden.Totk.ini`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.0.0-android-ports/Nightly.Eden.Totk.ini) for the previous Nightly export.
 
 1. Back up your current TOTK per-game settings.
 2. Download the preset intended for your Eden build and release.

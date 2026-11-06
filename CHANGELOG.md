@@ -1,11 +1,18 @@
 # Changelog
 
+## Release filename correction — 2026-11-06
+
+- Restored the simple filenames supplied by MPDERPER: `UltraCam 2.7.1.zip`, `UltraCam 3.0.0.zip`, `UltraCam 900p.zip`, and `EDEN STABLE SETTINGS.ini`.
+- Added UltraCam 2.7.1 to the v1.1.0 release alongside 3.0.0.
+- Removed the long generated filenames and the extra checksum download from the release page while retaining checksums in the repository and release notes.
+- Changed filenames only; executable and configuration bytes remain unchanged.
+
 ## Stable preset replacement — 2026-11-06
 
 - Replaced the v1.1.0 Stable preset with the newly supplied `EDEN STABLE SETTINGS.ini` byte-for-byte.
 - Preserved its `use_docked_mode = 0`, `use_docked_mode\default = true`, `scaling_filter = 0`, and every other supplied setting.
 - Kept the 900p installation warning that users must manually enable Docked Mode after importing the preset.
-- Published a separately named byte-identical copy for BOTW at MPDERPER's direction.
+- Published the same byte-identical `EDEN STABLE SETTINGS.ini` in the BOTW release at MPDERPER's direction.
 - Updated the release asset, checksum file, release notes, README, and provenance. No UltraCam executable or 900p configuration value changed.
 
 ## v1.1.0-900p-docked — 2026-11-06

@@ -38,6 +38,6 @@ The UltraCam 3.0.0 ExeFS files in v1.1.0 are byte-for-byte identical to the v1.0
 | --- | --- |
 | `UltraCam/TOTK/Config/maxlastbreath.ini` — 900p | `ffe9034aa7cf161bcd2650eac5654a448d6f12e1649b1ba8759bde85a71895a0` |
 | `UltraCam/TOTK/Config/PaletteCFG.json` | `bfda17efb2d80244c7c5cd92d738f0c8881dd963886519f6c8cf491df81984af` |
-| `totk-eden-stable-900p-docked-v1.1.0.ini` — replaced | `ab9fcccc986a52b0a791324fff84939511fb9aec52e524ea08826d913b3bc665` |
+| `EDEN STABLE SETTINGS.ini` | `ab9fcccc986a52b0a791324fff84939511fb9aec52e524ea08826d913b3bc665` |
 
-The published asset is a byte-for-byte copy of the user-supplied `EDEN STABLE SETTINGS.ini`. It intentionally retains `use_docked_mode\default = true`, `use_docked_mode = 0`, and `scaling_filter = 0`. Users of the 900p preset must manually enable Docked Mode in Eden after importing it. The Eden INI format does not include a Nintendo title ID; a separately named byte-identical copy is used for BOTW at MPDERPER's explicit direction.
+The published asset is a byte-for-byte copy of the user-supplied `EDEN STABLE SETTINGS.ini`. It intentionally retains `use_docked_mode\default = true`, `use_docked_mode = 0`, and `scaling_filter = 0`. Users of the 900p preset must manually enable Docked Mode in Eden after importing it. The Eden INI format does not include a Nintendo title ID; the same byte-identical file is also published in the BOTW release at MPDERPER's explicit direction.

@@ -32,9 +32,10 @@ I preserved these values. This release prioritizes Docked Mode and does not prom
 
 | Asset | Install method |
 | --- | --- |
-| [`totk-ultracam-3.0.0-900p-docked-exefs-v1.1.0.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/totk-ultracam-3.0.0-900p-docked-exefs-v1.1.0.zip) | Install through TOTK **Add-ons**. |
-| [`totk-ultracam-3.0.0-900p-docked-config-v1.1.0.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/totk-ultracam-3.0.0-900p-docked-config-v1.1.0.zip) | Extract into Eden's virtual **`sdmc`** root. |
-| [`totk-eden-stable-900p-docked-v1.1.0.ini`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/totk-eden-stable-900p-docked-v1.1.0.ini) | Import through Eden Stable's per-game **Import Config** action. |
+| [`UltraCam 3.0.0.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/UltraCam%203.0.0.zip) | Recommended 3.0.0 executable. Install through TOTK **Add-ons**. |
+| [`UltraCam 2.7.1.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/UltraCam%202.7.1.zip) | Optional legacy 2.7.1 executable. Install through TOTK **Add-ons**; never enable it with 3.0.0. |
+| [`UltraCam 900p.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/UltraCam%20900p.zip) | Extract into Eden's virtual **`sdmc`** root. |
+| [`EDEN STABLE SETTINGS.ini`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/EDEN%20STABLE%20SETTINGS.ini) | Import through Eden Stable's per-game **Import Config** action. |
 
 ### 720p — v1.0.0
 
@@ -76,11 +77,12 @@ Back up your current per-game settings and `sdmc/UltraCam/TOTK/Config` files fir
 
 ## 1. Download the 900p files
 
-Download all three assets from [v1.1.0-900p-docked](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/tag/v1.1.0-900p-docked):
+The [v1.1.0-900p-docked release](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/tag/v1.1.0-900p-docked) contains four simply named files:
 
-1. [`totk-ultracam-3.0.0-900p-docked-exefs-v1.1.0.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/totk-ultracam-3.0.0-900p-docked-exefs-v1.1.0.zip)
-2. [`totk-ultracam-3.0.0-900p-docked-config-v1.1.0.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/totk-ultracam-3.0.0-900p-docked-config-v1.1.0.zip)
-3. [`totk-eden-stable-900p-docked-v1.1.0.ini`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/totk-eden-stable-900p-docked-v1.1.0.ini)
+1. [`UltraCam 3.0.0.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/UltraCam%203.0.0.zip) — recommended executable for the 900p configuration.
+2. [`UltraCam 2.7.1.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/UltraCam%202.7.1.zip) — optional legacy executable for users who need it. Do not enable both versions.
+3. [`UltraCam 900p.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/UltraCam%20900p.zip) — separate 1600 × 900 SDMC configuration.
+4. [`EDEN STABLE SETTINGS.ini`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/EDEN%20STABLE%20SETTINGS.ini) — Eden Stable settings to import.
 
 The ExeFS and configuration ZIPs are separate because Eden loads the executable as a game add-on while UltraCam reads its settings from the virtual SD card.
 
@@ -110,7 +112,7 @@ UltraCam 3.0.0/
 
 1. Use Android's file manager with the access already granted to Eden, or Eden's supported Files/user-data access interface.
 2. Locate Eden Stable's existing virtual SD-card root, named **`sdmc`**. Its absolute Android path varies by build and device, so do not create a guessed path.
-3. Open `totk-ultracam-3.0.0-900p-docked-config-v1.1.0.zip`.
+3. Open `UltraCam 900p.zip`.
 4. Extract the included `UltraCam` folder **directly into the existing `sdmc` root**.
 5. Allow replacement of the two configuration files only after backing up any customized versions.
 6. Confirm the final paths below.
@@ -156,7 +158,7 @@ If the 720p configuration is already installed, copy its `maxlastbreath.ini` and
 The release INI is an Eden per-game configuration. It is not UltraCam's `maxlastbreath.ini`.
 
 1. Back up your current TOTK per-game settings.
-2. Download `totk-eden-stable-900p-docked-v1.1.0.ini`.
+2. Download `EDEN STABLE SETTINGS.ini`.
 3. Open Eden Stable and locate TOTK.
 4. Open the game's settings or properties.
 5. Use the supported **Import Config** action.
@@ -170,7 +172,7 @@ The exported preset contains a device-specific GPU-driver path for my Snapdragon
 
 Some frame-generation fields remain in the exported configuration, but Standard Eden builds may not expose or support every Nightly-specific feature. Review the values that your build actually presents. Do not treat retained keys as proof that frame generation is active.
 
-The Stable preset is my supplied `EDEN STABLE SETTINGS.ini` preserved byte-for-byte. It leaves Docked Mode off (`use_docked_mode = 0`) and retains its updated `scaling_filter = 0` choice. **After importing it for the 900p preset, manually enable Docked Mode in Eden.** The same settings are also published under a separate BOTW filename at my direction. Eden's exported INI format does not embed a Nintendo title ID, so the game-specific filenames identify where each copy is intended to be imported.
+The Stable preset is my supplied `EDEN STABLE SETTINGS.ini` preserved byte-for-byte. It leaves Docked Mode off (`use_docked_mode = 0`) and retains its updated `scaling_filter = 0` choice. **After importing it for the 900p preset, manually enable Docked Mode in Eden.** The same file is also published in the BOTW release at my direction. Eden's exported INI format does not embed a Nintendo title ID; the release page identifies which game workflow is being documented.
 
 ## 6. GPU driver information
 
