@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.1.0-900p-docked — 2026-11-06
+
+- Added a quality-focused UltraCam 3.0.0 preset targeting 1600 × 900 in Eden Stable Docked Mode.
+- Preserved the supplied `ShadowResolution = 512`, 5000 render distance, FOV 45, FSR, Dynamic FPS, 60 FPS target, shader toggles, time-speed values, LOD settings, and disabled handheld-resolution override.
+- Added separate ExeFS, virtual-SD configuration, and Eden Stable preset downloads with distinct installation paths.
+- Documented my AYN Thor Max observation of approximately 5 FPS less overworld performance than the 720p preset while shrines still reached approximately 60 FPS.
+- Reworked the main README around 720p versus 900p choices, Docked Mode, beginner installation, preset import, GPU-driver selection, verification, and troubleshooting.
+- Corrected the v1.0.0 README links to the actual published filenames: `ULTRACAM.zip`, `regular.Eden.totk.ini`, and `Nightly.Eden.Totk.ini`.
+- Preserved the existing 720p release and its historical observations.
+
 ## Standard Eden performance findings — 2026-11-03
 
 - Documented my latest UltraCam 3.0.0 results on Standard Eden at 1280 × 720 on an AYN Thor Max: approximately 50 FPS in the overworld and 60 FPS in shrines without frame generation.

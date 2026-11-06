@@ -29,3 +29,15 @@ All four supplied executable files were compared byte-for-byte with those upstre
 | Original `0100F2C0115B6000.ini_2` | `1ebd0bd54e51a020c01632baff9699d8d8216198c0963f7ac437a480ec6cab54` |
 
 Renaming the Eden preset does not change its bytes, so the release `.ini` has the same SHA-256.
+
+## v1.1.0 900p Docked inputs
+
+The UltraCam 3.0.0 ExeFS files in v1.1.0 are byte-for-byte identical to the v1.0.0 and upstream files listed above. The 900p configuration and Stable Eden export were supplied by MPDERPER and preserved without changing their tested values.
+
+| File | SHA-256 |
+| --- | --- |
+| `UltraCam/TOTK/Config/maxlastbreath.ini` — 900p | `ffe9034aa7cf161bcd2650eac5654a448d6f12e1649b1ba8759bde85a71895a0` |
+| `UltraCam/TOTK/Config/PaletteCFG.json` | `bfda17efb2d80244c7c5cd92d738f0c8881dd963886519f6c8cf491df81984af` |
+| `totk-eden-stable-900p-docked-v1.1.0.ini` | `b42a413ac0e361f0927c69374ef1daf29221aa36662d8af60f2c8de9f646924b` |
+
+The Eden INI format does not include a Nintendo title ID. Its TOTK identity was established from its direct settings lineage with the previously published TOTK Stable export and the supplied release context. It was not reused for another game.

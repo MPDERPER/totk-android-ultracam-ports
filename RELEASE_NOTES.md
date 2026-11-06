@@ -24,8 +24,9 @@ Read the [complete installation guide in the README](https://github.com/MPDERPER
 
 - `totk-ultracam-2.7.1-eden-720p.zip`: unchanged 2.7.1 ExeFS payload. The legacy RomFS INI is not included; the ExeFS-only package can still perform its built-in behavior.
 - `totk-ultracam-3.0.0-eden-720p.zip`: unchanged 3.0.0 ExeFS payload.
-- `totk-ultracam-3.0.0-android-config.zip`: extract into Eden’s virtual SD-card root so the final INI is `sdmc/UltraCam/TOTK/Config/maxlastbreath.ini`.
-- `0100F2C0115B6000.ini`: optional TOTK per-game preset. Back up first, import through Eden, and reselect your installed GPU driver.
+- `ULTRACAM.zip`: extract into Eden’s virtual SD-card root so the final INI is `sdmc/UltraCam/TOTK/Config/maxlastbreath.ini`.
+- `regular.Eden.totk.ini`: optional Standard Eden TOTK per-game preset.
+- `Nightly.Eden.Totk.ini`: optional Eden Nightly TOTK per-game preset. Back up first, import the matching preset through Eden, and reselect your installed GPU driver.
 
 Install only one UltraCam ExeFS version at a time.
 

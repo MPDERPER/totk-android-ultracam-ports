@@ -1,11 +1,24 @@
 # Installation
 
-This guide keeps four different components separate: the UltraCam ExeFS add-on, the legacy 2.7.1 RomFS customization path, the 3.0.0 virtual-SD configuration, and Eden’s optional per-game preset.
+This guide keeps four different components separate: the UltraCam ExeFS add-on, the legacy 2.7.1 RomFS customization path, the 3.0.0 virtual-SD configuration, and Eden’s optional per-game preset. The complete beginner workflow also appears directly in the [main README](../README.md#installation-guide--read-this-first).
+
+## 900p Docked quick reference
+
+The [v1.1.0 900p Docked release](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/tag/v1.1.0-900p-docked) uses three separate downloads:
+
+1. Install [`totk-ultracam-3.0.0-900p-docked-exefs-v1.1.0.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/totk-ultracam-3.0.0-900p-docked-exefs-v1.1.0.zip) through TOTK's **Add-ons** manager.
+2. Extract the `UltraCam` folder from [`totk-ultracam-3.0.0-900p-docked-config-v1.1.0.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/totk-ultracam-3.0.0-900p-docked-config-v1.1.0.zip) directly into Eden Stable's existing virtual `sdmc` root.
+3. Import [`totk-eden-stable-900p-docked-v1.1.0.ini`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/totk-eden-stable-900p-docked-v1.1.0.ini) through Eden Stable's per-game **Import Config** action.
+4. Enable **Docked Mode**, restart Eden, and verify 1600 × 900 with `ShadowResolution = 512`.
+
+> **IMPORTANT: THIS IS THE 900P DOCKED PRESET. ENABLE DOCKED MODE IN EDEN BEFORE PLAYING.**
+
+The final configuration path is `sdmc/UltraCam/TOTK/Config/maxlastbreath.ini`. Do not install the SDMC configuration through Add-ons, and do not copy the ExeFS files into `sdmc`. Back up an existing 720p configuration before replacing it. The following sections also document the older 720p and 2.7.1 workflows.
 
 ## Before installing
 
 1. Back up TOTK’s current per-game settings and existing mods.
-2. Record your game update, Eden Nightly build, device, and working GPU driver.
+2. Record your game update, Eden build, device, and working GPU driver.
 3. Disable other UltraCam, Dynamic FPS, FPS, resolution, `main.npdm`, or `subsdk3` modifications.
 4. Download **one** UltraCam ExeFS ZIP. Never enable 2.7.1 and 3.0.0 together.
 5. Prefer UltraCam 3.0.0 for TOTK 1.4.1 or 1.4.2. My 2.7.1 FPS unlock did not work on those updates.
@@ -14,7 +27,7 @@ This guide keeps four different components separate: the UltraCam ExeFS add-on, 
 
 1. Download `totk-ultracam-2.7.1-eden-720p.zip` from the [release](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/tag/v1.0.0-android-ports).
 2. Extract it if your Eden build requires an unpacked add-on directory.
-3. Open Eden Nightly, select TOTK, and open the game’s **Add-ons** section.
+3. Open Eden, select TOTK, and open the game’s **Add-ons** section.
 4. Import or select the UltraCam 2.7.1 package and make sure it is enabled.
 5. Confirm the effective structure is:
 
@@ -42,7 +55,7 @@ On TOTK 1.4.1 and 1.4.2, my 2.7.1 package still loaded and applied FOV, render-d
 ### Part 1 — ExeFS add-on
 
 1. Download `totk-ultracam-3.0.0-eden-720p.zip`.
-2. Open TOTK’s **Add-ons** section in Eden Nightly.
+2. Open TOTK’s **Add-ons** section in Eden.
 3. Import or select the package and make sure it is enabled.
 4. Confirm the structure is:
 
@@ -55,13 +68,13 @@ UltraCam 3.0.0/
 
 ### Part 2 — virtual-SD configuration
 
-1. Download `totk-ultracam-3.0.0-android-config.zip`.
-2. Locate Eden Nightly’s virtual SD-card root.
+1. For the existing 720p release, download [`ULTRACAM.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.0.0-android-ports/ULTRACAM.zip). For 900p, use the v1.1.0 configuration linked above.
+2. Locate Eden’s virtual SD-card root.
 3. Extract the ZIP into that root while preserving the archive’s folders.
 4. Confirm the final layout is:
 
 ```text
-Eden Nightly/
+Eden/
 └── sdmc/
     └── UltraCam/
         └── TOTK/
@@ -84,24 +97,24 @@ The required INI path is `sdmc/UltraCam/TOTK/Config/maxlastbreath.ini`. This con
 
 ### Verify UltraCam 3.0.0
 
-1. Fully restart Eden Nightly.
+1. Fully restart Eden.
 2. Launch TOTK and confirm normal game speed, graphics, resolution, and frame pacing.
 3. Hold **ZL + ZR** and click the left stick (**L3**) to open the menu in my tested controller configuration.
 4. Verify the FPS and resolution values.
 5. If nothing changes, recheck the exact virtual-SD path and disable conflicts.
 
-## Import the Eden Nightly per-game preset
+## Import an Eden per-game preset
 
-`0100F2C0115B6000.ini` is an emulator preset, not UltraCam’s `maxlastbreath.ini`.
+The emulator preset is not UltraCam’s `maxlastbreath.ini`. Use `totk-eden-stable-900p-docked-v1.1.0.ini` for the new 900p Stable workflow, [`regular.Eden.totk.ini`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.0.0-android-ports/regular.Eden.totk.ini) for the previous Standard Eden export, or [`Nightly.Eden.Totk.ini`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.0.0-android-ports/Nightly.Eden.Totk.ini) for the previous Nightly export.
 
 1. Back up your current TOTK per-game settings.
-2. Download `0100F2C0115B6000.ini`.
+2. Download the preset intended for your Eden build and release.
 3. Open TOTK’s properties in Eden and use **Import Config**.
 4. Import the file and review the resulting CPU, graphics, and frame-generation settings.
 5. Open the GPU Driver Manager and manually select a driver appropriate for your GPU.
-6. Fully restart Eden.
+6. Confirm Docked Mode for the 900p preset, then fully restart Eden.
 
-The preset was exported with TurnipZ 0.3.0 and contains an Android-specific driver path. Importing it does not install that driver, and the path may not exist elsewhere. Do not replace it with a guessed Turnip v27.0.0-R1 path. Select the desired installed driver through Eden after importing.
+Each exported preset can contain an Android-specific driver path. Importing it does not install that driver, and the path may not exist elsewhere. Do not replace it with a guessed path. Select the desired installed driver through Eden after importing. The v1.1.0 Stable preset references a Balemuni Apex package used on the tested Snapdragon 8 Gen 2 device; the older published preset was associated with TurnipZ 0.3.0.
 
 ## Install a custom GPU driver — Adreno 740
 
