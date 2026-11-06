@@ -1,5 +1,12 @@
 # Changelog
 
+## Stable preset correction — 2026-11-06
+
+- Replaced the v1.1.0 Stable preset with the newly supplied `EDEN STABLE SETTINGS.ini` as the base.
+- Enabled Docked Mode by setting `use_docked_mode = 1` with matching non-default metadata.
+- Preserved the corrected preset's `scaling_filter = 0` value and every other supplied setting.
+- Updated the published asset, checksum file, release notes, README, and provenance. No UltraCam executable or 900p configuration value changed.
+
 ## v1.1.0-900p-docked — 2026-11-06
 
 - Added a quality-focused UltraCam 3.0.0 preset targeting 1600 × 900 in Eden Stable Docked Mode.

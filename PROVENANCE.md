@@ -38,6 +38,6 @@ The UltraCam 3.0.0 ExeFS files in v1.1.0 are byte-for-byte identical to the v1.0
 | --- | --- |
 | `UltraCam/TOTK/Config/maxlastbreath.ini` — 900p | `ffe9034aa7cf161bcd2650eac5654a448d6f12e1649b1ba8759bde85a71895a0` |
 | `UltraCam/TOTK/Config/PaletteCFG.json` | `bfda17efb2d80244c7c5cd92d738f0c8881dd963886519f6c8cf491df81984af` |
-| `totk-eden-stable-900p-docked-v1.1.0.ini` | `b42a413ac0e361f0927c69374ef1daf29221aa36662d8af60f2c8de9f646924b` |
+| `totk-eden-stable-900p-docked-v1.1.0.ini` — corrected | `dee11281ddbfad6a5b78f99abd2e6adab414ab827f8284d789c3b57f3d662575` |
 
-The Eden INI format does not include a Nintendo title ID. Its TOTK identity was established from its direct settings lineage with the previously published TOTK Stable export and the supplied release context. It was not reused for another game.
+The corrected asset is based on the user-supplied `EDEN STABLE SETTINGS.ini` (`ab9fcccc986a52b0a791324fff84939511fb9aec52e524ea08826d913b3bc665` before the requested Docked Mode change). The published copy changes `use_docked_mode\default` from `true` to `false` and `use_docked_mode` from `0` to `1`. It preserves `scaling_filter = 0` and every other supplied value. The Eden INI format does not include a Nintendo title ID; a separately named byte-identical copy is used for BOTW at MPDERPER's explicit direction.
