@@ -6,9 +6,9 @@ This guide keeps four different components separate: the UltraCam ExeFS add-on, 
 
 The [v1.1.0 900p Docked release](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/tag/v1.1.0-900p-docked) uses three separate downloads:
 
-1. Install [`UltraCam 3.0.0.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/UltraCam%203.0.0.zip) through TOTK's **Add-ons** manager. [`UltraCam 2.7.1.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/UltraCam%202.7.1.zip) is also available for legacy use, but only one executable version may be enabled.
-2. Extract the `UltraCam` folder from [`UltraCam 900p.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/UltraCam%20900p.zip) directly into Eden Stable's existing virtual `sdmc` root.
-3. Import [`EDEN STABLE SETTINGS.ini`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/EDEN%20STABLE%20SETTINGS.ini) through Eden Stable's per-game **Import Config** action.
+1. Install [`UltraCam 3.0.0.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/UltraCam.3.0.0.zip) through TOTK's **Add-ons** manager. [`UltraCam 2.7.1.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/UltraCam.2.7.1.zip) is also available for legacy use, but only one executable version may be enabled.
+2. Extract the `UltraCam` folder from [`UltraCam 900p.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/UltraCam.900p.zip) directly into Eden Stable's existing virtual `sdmc` root.
+3. Import [`EDEN STABLE SETTINGS.ini`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/EDEN.STABLE.SETTINGS.ini) through Eden Stable's per-game **Import Config** action.
 4. Enable **Docked Mode**, restart Eden, and verify 1600 × 900 with `ShadowResolution = 512`.
 
 > **IMPORTANT: THIS IS THE 900P DOCKED PRESET. ENABLE DOCKED MODE IN EDEN BEFORE PLAYING.**

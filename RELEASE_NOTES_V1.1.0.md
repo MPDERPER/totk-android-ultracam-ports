@@ -13,6 +13,8 @@ This release adds my quality-focused **1600 × 900** configuration for UltraCam 
 
 The Stable asset was replaced after publication with my newer `EDEN STABLE SETTINGS.ini`, preserved byte-for-byte. It keeps `scaling_filter = 0` and leaves Docked Mode off. **Manually enable Docked Mode in Eden after importing it for this 900p preset.**
 
+GitHub stores spaces in release-asset filenames as periods. The release page uses the original spaced labels, while the downloaded files are `UltraCam.3.0.0.zip`, `UltraCam.2.7.1.zip`, `UltraCam.900p.zip`, and `EDEN.STABLE.SETTINGS.ini`.
+
 The ExeFS add-on, SDMC configuration, and Eden INI have different destinations. The [complete installation guide](https://github.com/MPDERPER/totk-android-ultracam-ports#installation-guide--read-this-first) explains every step.
 
 ## Tested configuration
@@ -65,8 +67,8 @@ No ROM, game update, firmware, keys, emulator binary, GPU-driver binary, or Nint
 ## SHA-256
 
 ```text
-ab9fcccc986a52b0a791324fff84939511fb9aec52e524ea08826d913b3bc665  EDEN STABLE SETTINGS.ini
-163e45f0b9a8e23dc2b73f67b5d02bce1e5d8a2faa9bda54ff38f3a94a3de86f  UltraCam 2.7.1.zip
-57d802bef11afc2c98f83b79f820a7e89e10dfcbcea3930e0808b4ab7ed3f319  UltraCam 3.0.0.zip
-7960eb17fb1c60f0a32ceb397c57754811857fa4050d96b22bd0068dc77e20ca  UltraCam 900p.zip
+ab9fcccc986a52b0a791324fff84939511fb9aec52e524ea08826d913b3bc665  EDEN.STABLE.SETTINGS.ini
+163e45f0b9a8e23dc2b73f67b5d02bce1e5d8a2faa9bda54ff38f3a94a3de86f  UltraCam.2.7.1.zip
+57d802bef11afc2c98f83b79f820a7e89e10dfcbcea3930e0808b4ab7ed3f319  UltraCam.3.0.0.zip
+7960eb17fb1c60f0a32ceb397c57754811857fa4050d96b22bd0068dc77e20ca  UltraCam.900p.zip
 ```

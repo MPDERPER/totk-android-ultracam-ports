@@ -32,10 +32,12 @@ I preserved these values. This release prioritizes Docked Mode and does not prom
 
 | Asset | Install method |
 | --- | --- |
-| [`UltraCam 3.0.0.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/UltraCam%203.0.0.zip) | Recommended 3.0.0 executable. Install through TOTK **Add-ons**. |
-| [`UltraCam 2.7.1.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/UltraCam%202.7.1.zip) | Optional legacy 2.7.1 executable. Install through TOTK **Add-ons**; never enable it with 3.0.0. |
-| [`UltraCam 900p.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/UltraCam%20900p.zip) | Extract into Eden's virtual **`sdmc`** root. |
-| [`EDEN STABLE SETTINGS.ini`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/EDEN%20STABLE%20SETTINGS.ini) | Import through Eden Stable's per-game **Import Config** action. |
+| [`UltraCam 3.0.0.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/UltraCam.3.0.0.zip) | Recommended 3.0.0 executable. Install through TOTK **Add-ons**. |
+| [`UltraCam 2.7.1.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/UltraCam.2.7.1.zip) | Optional legacy 2.7.1 executable. Install through TOTK **Add-ons**; never enable it with 3.0.0. |
+| [`UltraCam 900p.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/UltraCam.900p.zip) | Extract into Eden's virtual **`sdmc`** root. |
+| [`EDEN STABLE SETTINGS.ini`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/EDEN.STABLE.SETTINGS.ini) | Import through Eden Stable's per-game **Import Config** action. |
+
+The release page shows the original spaced names above. GitHub stores spaces in release-asset filenames as periods, which is why the direct download URLs use dotted forms.
 
 ### 720p — v1.0.0
 
@@ -79,10 +81,10 @@ Back up your current per-game settings and `sdmc/UltraCam/TOTK/Config` files fir
 
 The [v1.1.0-900p-docked release](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/tag/v1.1.0-900p-docked) contains four simply named files:
 
-1. [`UltraCam 3.0.0.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/UltraCam%203.0.0.zip) — recommended executable for the 900p configuration.
-2. [`UltraCam 2.7.1.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/UltraCam%202.7.1.zip) — optional legacy executable for users who need it. Do not enable both versions.
-3. [`UltraCam 900p.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/UltraCam%20900p.zip) — separate 1600 × 900 SDMC configuration.
-4. [`EDEN STABLE SETTINGS.ini`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/EDEN%20STABLE%20SETTINGS.ini) — Eden Stable settings to import.
+1. [`UltraCam 3.0.0.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/UltraCam.3.0.0.zip) — recommended executable for the 900p configuration.
+2. [`UltraCam 2.7.1.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/UltraCam.2.7.1.zip) — optional legacy executable for users who need it. Do not enable both versions.
+3. [`UltraCam 900p.zip`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/UltraCam.900p.zip) — separate 1600 × 900 SDMC configuration.
+4. [`EDEN STABLE SETTINGS.ini`](https://github.com/MPDERPER/totk-android-ultracam-ports/releases/download/v1.1.0-900p-docked/EDEN.STABLE.SETTINGS.ini) — Eden Stable settings to import.
 
 The ExeFS and configuration ZIPs are separate because Eden loads the executable as a game add-on while UltraCam reads its settings from the virtual SD card.
 
