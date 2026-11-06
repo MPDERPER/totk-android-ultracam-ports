@@ -116,7 +116,7 @@ The emulator preset is not UltraCam’s `maxlastbreath.ini`. Use `totk-eden-stab
 
 Each exported preset can contain an Android-specific driver path. Importing it does not install that driver, and the path may not exist elsewhere. Do not replace it with a guessed path. Select the desired installed driver through Eden after importing. The v1.1.0 Stable preset references a Balemuni Apex package used on the tested Snapdragon 8 Gen 2 device; the older published preset was associated with TurnipZ 0.3.0.
 
-The corrected v1.1.0 Stable asset uses the newly supplied Stable settings, preserves `scaling_filter = 0`, and explicitly enables Docked Mode with `use_docked_mode = 1`.
+The v1.1.0 Stable asset is the newly supplied `EDEN STABLE SETTINGS.ini` preserved byte-for-byte. It retains `scaling_filter = 0` and leaves `use_docked_mode = 0`, so 900p users must manually enable Docked Mode after importing it.
 
 ## Install a custom GPU driver — Adreno 740
 

@@ -3,6 +3,6 @@
 163e45f0b9a8e23dc2b73f67b5d02bce1e5d8a2faa9bda54ff38f3a94a3de86f  totk-ultracam-2.7.1-eden-720p.zip
 ab357488727852825954c312684c26a6ae43f787dc59719b08a09360a4948438  ULTRACAM.zip
 57d802bef11afc2c98f83b79f820a7e89e10dfcbcea3930e0808b4ab7ed3f319  totk-ultracam-3.0.0-eden-720p.zip
-dee11281ddbfad6a5b78f99abd2e6adab414ab827f8284d789c3b57f3d662575  totk-eden-stable-900p-docked-v1.1.0.ini
+ab9fcccc986a52b0a791324fff84939511fb9aec52e524ea08826d913b3bc665  totk-eden-stable-900p-docked-v1.1.0.ini
 7960eb17fb1c60f0a32ceb397c57754811857fa4050d96b22bd0068dc77e20ca  totk-ultracam-3.0.0-900p-docked-config-v1.1.0.zip
 57d802bef11afc2c98f83b79f820a7e89e10dfcbcea3930e0808b4ab7ed3f319  totk-ultracam-3.0.0-900p-docked-exefs-v1.1.0.zip

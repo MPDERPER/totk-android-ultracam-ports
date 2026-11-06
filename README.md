@@ -170,7 +170,7 @@ The exported preset contains a device-specific GPU-driver path for my Snapdragon
 
 Some frame-generation fields remain in the exported configuration, but Standard Eden builds may not expose or support every Nightly-specific feature. Review the values that your build actually presents. Do not treat retained keys as proof that frame generation is active.
 
-The corrected Stable preset is based on my supplied `EDEN STABLE SETTINGS.ini`. I enabled Docked Mode in the published copy while preserving its updated `scaling_filter = 0` choice and all other settings. The same corrected base settings are also published under a separate BOTW filename at my direction. Eden's exported INI format does not embed a Nintendo title ID, so the game-specific filenames identify where each copy is intended to be imported.
+The Stable preset is my supplied `EDEN STABLE SETTINGS.ini` preserved byte-for-byte. It leaves Docked Mode off (`use_docked_mode = 0`) and retains its updated `scaling_filter = 0` choice. **After importing it for the 900p preset, manually enable Docked Mode in Eden.** The same settings are also published under a separate BOTW filename at my direction. Eden's exported INI format does not embed a Nintendo title ID, so the game-specific filenames identify where each copy is intended to be imported.
 
 ## 6. GPU driver information
 

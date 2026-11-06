@@ -10,7 +10,7 @@ This release adds my quality-focused **1600 × 900** configuration for UltraCam 
 - `totk-ultracam-3.0.0-900p-docked-config-v1.1.0.zip` — the separate 900p UltraCam configuration. Extract its `UltraCam` folder directly into Eden's existing virtual `sdmc` root.
 - `totk-eden-stable-900p-docked-v1.1.0.ini` — my updated Standard/Stable Eden per-game preset. Back up first and import it through Eden's per-game **Import Config** action.
 
-The Stable asset was corrected after publication using my newer `EDEN STABLE SETTINGS.ini`: Docked Mode is enabled, the new `scaling_filter = 0` value is preserved, and all other supplied settings remain unchanged.
+The Stable asset was replaced after publication with my newer `EDEN STABLE SETTINGS.ini`, preserved byte-for-byte. It keeps `scaling_filter = 0` and leaves Docked Mode off. **Manually enable Docked Mode in Eden after importing it for this 900p preset.**
 
 The ExeFS add-on, SDMC configuration, and Eden INI have different destinations. The [complete installation guide](https://github.com/MPDERPER/totk-android-ultracam-ports#installation-guide--read-this-first) explains every step.
 
@@ -64,7 +64,7 @@ No ROM, game update, firmware, keys, emulator binary, GPU-driver binary, or Nint
 ## SHA-256
 
 ```text
-dee11281ddbfad6a5b78f99abd2e6adab414ab827f8284d789c3b57f3d662575  totk-eden-stable-900p-docked-v1.1.0.ini
+ab9fcccc986a52b0a791324fff84939511fb9aec52e524ea08826d913b3bc665  totk-eden-stable-900p-docked-v1.1.0.ini
 7960eb17fb1c60f0a32ceb397c57754811857fa4050d96b22bd0068dc77e20ca  totk-ultracam-3.0.0-900p-docked-config-v1.1.0.zip
 57d802bef11afc2c98f83b79f820a7e89e10dfcbcea3930e0808b4ab7ed3f319  totk-ultracam-3.0.0-900p-docked-exefs-v1.1.0.zip
 ```
